@@ -1,4 +1,4 @@
-﻿<div class='cuadro'>
+<div class='cuadro'>
 	<div class='titulos'>
 		<div>Nombre</div>
 		<!--<div>Dni</div>-->

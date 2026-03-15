@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 					//$line=$consulta."<br/>";
 					$consulta="SELECT * FROM municipios;";	
 					$result=$conn->prepare($consulta);

@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 	$id=$_GET['id'];
 	$portada=(isset($_GET['portada']))?2:1;
 	$conn = new PDO('mysql:host=localhost; dbname=vertebra', 'myfemmenca', '2959_0469');

@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 @session_start();
 ?>
 <form id='ideas' class='ideas'>

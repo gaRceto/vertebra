@@ -1,4 +1,4 @@
-﻿<?php
+<?php
     $json = json_decode( file_get_contents( 'slider.json' ), true );
 ?>
 <div id="images">

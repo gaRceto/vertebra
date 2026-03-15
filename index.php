@@ -45,7 +45,7 @@ header ("Pragma: no-cache"); //PARANOIA, NO GUARDAR EN CACHE
 				$result=$conn->prepare($consulta);
 				$result->execute();
 				$resultat=$result->fetch(PDO::FETCH_ASSOC);
-				if($resultat['id']){
+				if($resultat && $resultat['id']){
 					$line="<a class='nd' href='https://vertebraragon.com/comentarios#comm".$resultat['id']."' target='_blank'><div class='comentary'>";
 					$line.="<div><span class='elnombre'>".$resultat['nombre']."</span><h2 class='titul'>".$resultat['titulo']."</h2></div>";
 					$line.="<span class='ladat'>".date('d-m-Y, H:i:s',$resultat['fecha'])."</span>";
