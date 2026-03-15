@@ -153,7 +153,7 @@ header ("Pragma: no-cache"); //PARANOIA, NO GUARDAR EN CACHE
 	<section class='trenada'>
 <?php
 	rsort($trenes);
-	$texto=implode($trenes,PHP_EOL);
+	$texto=implode(PHP_EOL,$trenes);
 	//echo $texto;
 	echo $lestrains;
 ?>
