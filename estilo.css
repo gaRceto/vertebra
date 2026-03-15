@@ -1,0 +1,715 @@
+body{
+	line-height: 1.7em;
+	font-size:1.5em;
+	font-family: Muli;
+}
+a{text-decoration: none;}
+div.clara{
+    background-color: rgb(38, 146, 131);
+    color: white;
+    font-weight: normal;
+    padding: 1%;
+    text-shadow: 1px 1px 1px black;
+}
+div.cuadro{
+    background-image: url("http://seguimosenconstruccion.info/img/loggob.png");
+	background-position: 51% 20%;
+    background-repeat: no-repeat;
+}
+div.datos{
+	flex-basis:60%;
+}
+div.acto{
+	flex-basis:30%;
+}
+div.acto > img {
+    width: 100%;
+}
+div.apoyos h2, div.apoyos h4{margin:0.5em;}
+div.firmalo{align-self:center;}
+div.firmalo img{width: 40px;border-radius:50%;border:1px solid transparent;}
+div.firmalo img:hover{border-radius:50%;border:1px solid white;box-shadow: -1px 8px 7px 1px black;}
+div.portada{cursor:pointer;}
+div.sube{
+	background-image: url('http://seguimosenconstruccion.info/img/sube.png');
+	background-repeat: no-repeat;
+	border:1px solid white;
+	border-radius: 50%;
+	bottom:2em;
+	cursor:initial;
+	height:60px;
+	opacity:0;
+	position:fixed;
+	right:2em;
+	transition: opacity 0.3s linear 0.3s;
+	width:60px;
+	z-index:1;
+}
+div.sube:hover{
+	cursor:pointer;
+	opacity:1;
+}
+div.texte{-ms-flex-preferred-size: 50%;flex-basis: 50%;}
+form#ideas.abierto{    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row wrap;
+    -o-flex-flow: row wrap;
+    flex-flow: row wrap;}
+form#ideas {
+    font-size: 0.8em;
+    left: 25%;
+    line-height: 1em;
+    position: absolute;
+    text-align: center;
+    width: 40%;
+    z-index: 100;
+}
+form#ideas {
+    display: none;
+}
+hr{
+	margin:1em;
+}
+select.seccion {
+    display: block;
+}
+select {
+    margin: auto;
+}
+
+#send {
+    margin-bottom: 1em;
+}
+.kptz label {
+    display: block;
+}
+.cptz {
+    width: 300px;
+}
+form input[type="submit"] {
+    color: rgb(255, 215, 8);
+    display: block;
+    font-size: 1em;
+    height: 2em;
+    opacity: 0.6;
+    text-shadow: 1px 1px 1px #000;
+    transition: opacity 1s linear 1s;
+    width: 30%;
+    z-index: 100;
+}
+.atencion {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 3%;
+    width: 100%;
+}
+.atencion .close:hover{
+	cursor: pointer;
+	color:red;
+}
+.inombre, .iemail, .ititulo {
+    font-size: 1em;
+    height: 30px;
+    width: 79%;
+}
+.ideas textarea {
+    font-size: 1.2em;
+    height: 300px;
+    margin: 1em auto;
+    padding: 1%;
+    width: 92%;
+}
+form input {
+    margin: 0.7em auto auto;
+    width: 50%;
+}
+.ideas {
+    background-color: rgb(97,45,98);
+    color: white;
+    display: flex;
+    flex-flow: column wrap;
+    margin: auto auto 1em;
+    width: 80%;
+    box-shadow: -9px 9px 14px 5px black;
+}
+div.inputs{margin-bottom:2em;}
+div.laportada img{height:100%;width:100%;}
+div.portada {
+    background-image: url("http://seguimosenconstruccion.info/img/circulo.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    opacity: 1;
+    width: 94px;
+}
+div.tutisa {
+    text-align: center;
+}
+div.tutisa > h2 {
+    display: inline-block;
+    vertical-align: middle;
+}
+div.tutisa > img {
+    vertical-align: middle;
+    width: 10%;
+}
+div.manifiest,div.contacto,div.agradecimientos {
+    background-color: rgb(97,45,98);
+    color: white;
+    margin: auto;
+    padding: 2%;
+    position:relative;
+    text-shadow: 1px 1px 1px black;
+    width: 70%;
+}
+div.manifiest a{
+	color:rgba(255,255,255);
+	opacity:.6;
+}
+div.manifiest a:hover{
+	opacity:1;
+}
+
+div.contacto {
+    padding-bottom: 0;
+    margin-top:7%;
+    width: 90%;
+}
+div.pepito{
+	height:2em;
+}
+div.textos {
+    border-bottom: 1px solid rgb(159,247,129);
+    margin: auto;
+    width: 86%;
+}
+div.textos *:last-child {
+    margin-bottom: 3em;
+}
+figure.imagenes, .ciego {
+	transition: opacity 0.5s linear 0s;
+	opacity: 0;
+    display: none;
+}
+figure.imagenes.actiu{
+	opacity: 1;
+    display: block;
+}
+figure.imagenes img {
+    width: 70%;
+}
+form p {
+    color: black;
+    font-size: 0.4em;
+    margin: auto;
+    text-align: justify;
+    width: 90%;
+}
+form input {
+    margin: 0.7em auto auto;
+    width: 50%;
+}
+form input[type="submit"] {
+    color: rgba(255,215,8);
+    display: block;
+    font-size: 1em;
+    height: 2em;
+    opacity: 0.6;
+    text-shadow: 1px 1px 1px #000;
+    transition: opacity 1s linear 1s;
+    width: 30%;
+    z-index: 100;
+}
+form input[type="submit"]:hover {
+    opacity:1;
+    border: 1px solid rgba(255,215,8,1);
+    cursor: pointer;
+}
+
+footer {
+    background-color: rgb(38,146,131);
+    color: white;
+    margin: 0;
+    z-index:0;
+}
+footer.lst{
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 100%;
+}
+footer p {
+	color:white;
+    padding: 1em 11%;
+}
+h1 {
+    color: black;
+    left: 10%;
+    position: absolute;
+    text-shadow: 3px 4px 4px black;
+    top: 40%;
+}
+h2,h4 {
+	color:rgb(97,45,98);
+    line-height: 1em;
+    text-align: center;
+    text-shadow: -4px 3px 7px black;   
+}
+h2 {
+    color: rgb(97,45,98);
+    font-size: 90px;
+}
+h2#fotos{
+	margin:1em 0 0;
+}
+nav {
+    background-color: rgb(38,146,131);
+    box-shadow: 6px 2px 14px 4px black;
+    height: 4em;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}		
+nav,ul.ulportada,div.titulos,.cuadro .titulos, .cuadro .listado .linea{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	-moz-flex-flow: row wrap;
+	-ms-flex-flow: row wrap;
+	-o-flex-flow: row wrap;
+	justify-content: space-around;
+}
+div#mapa{width: 100%;height: 26em;}
+div#images{position: relative;}
+p{font-family: "Muli",sans-serif;font-size:0.9em;text-align:justify;}
+p.contactum{cursor: pointer;font-size: 0.8em;text-align: center;}
+p.contactum:hover{color:black;text-shadow:1px 1px 1px white;}
+p.correo {color: white;padding-top: 1%;text-align: center;}
+p.correo > a {color: white;opacity:.7;}
+p.correo > a:hover {color: white;opacity:1;}
+p.correo img{width:10px;}
+p.medio {color: black;font-family: BenchNine;font-size: 2em;left: 30%;position: absolute;top: 20%;text-shadow:1px 1px 1px black;}
+p.middle{font-size: 0.6em;margin-bottom: auto;margin-left:auto;margin-right:auto;text-align: center;}
+p.middle a{color:#DF7401;}
+p.middle a:hover{text-decoration: underline;color:#000;text-shadow: 1px 1px 1px #DF7401;}
+p.lastinf {border: 3px solid #0b3b17;margin: auto;width:80%;padding:2%}
+p.lastinf a:hover{text-decoration: underline;}
+p.ppcs {color: gold;font-size:0.7em;margin: auto;text-align: center;text-shadow: 1px 1px 1px black;text-decoration: underline;}
+p.ppcs span{color:white;font-weight: bold;}
+section.info{/*border: 4px solid*/;margin-top:5em;background-color: rgb(38,146,131);}
+section.info .reunion {
+    color: white;
+    margin: auto;
+    padding-bottom: 1em;
+    text-align: justify;
+    width: 80%;
+}
+
+section.info .reunion a {
+    text-shadow: 1px 1px 7px;
+}
+section.info .reunion a:hover{
+	color:white;
+	font-weight: bold;
+}
+section.elmanifiesto{margin-top:1em;}
+section.manifiesto {background-color: rgb(38,146,131);}
+section.contacto{
+    background-image: url("http://seguimosenconstruccion.info/img/enconstruccion.jpg");
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    -moz-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    -o-flex-flow: row wrap;
+    flex-flow: row wrap;
+}
+section.contacto > h2,section.localizacion > h2 {
+    background: black none repeat scroll 0 0;
+    padding: 0 0 0.6em;
+}
+section.localizacion > h2 {
+    margin: 1em 0 0;
+}
+section.contacto div.contacto h2{
+	color:black;
+}
+section.localizacion{
+	text-align:center;
+}
+section.firmas{
+	margin-top:5em;
+}
+section.imagenes {
+	background-color: rgba(38,146,131,.7);
+	color:white;
+	margin-bottom: 1em;
+    text-align: center;
+}
+section.inicio{ text-align:center;}
+select {
+    margin: auto;
+}
+ul.ulportada{
+	list-style-type: none;
+}
+ul.ulportada li a{
+	color:#AAA;
+}
+ul.ulportada li a:hover,ul.ulportada li a.active{
+	color:white;
+}
+.agradecimientos > h2 {
+	color:black;
+    font-size: 4em;
+}
+.cuadro .titulos, .cuadro .listado .linea {
+    border-bottom: 1px solid;
+    font-weight: bold;
+    justify-content: space-between;
+    padding: 0.3em 1em;
+}
+.cuadro .listado .linea{font-weight: normal;}
+.dcha img {
+    border-radius: 50%;
+    position: absolute;
+    right: 4%;
+    top: 1%;
+}
+.dos{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-around;
+	flex-flow: row wrap;
+}
+.dos a {
+    color: gold;
+    font-size: 2em;
+}
+.dos a:hover{
+	color:grey;
+}
+.dos img{
+	vertical-align: middle;
+}
+.elmenu,.oculto{
+	display: none;
+}
+.firmas > div {
+    margin: auto;
+    width: 70%;
+}
+.fotoportada > img {
+    height: 42em;
+    position: absolute;
+    width: 100%;
+    z-index: 0;
+}
+
+.fotoportada {
+    height: 42em;
+    position: relative;
+    width: 100%;
+}
+.inputs > input, .inputs > select {
+	border-radius:0;
+    display: block;
+    height: 40px;
+    margin: 1em auto;
+    width: 90%;
+}
+.linea {
+    font-size: 0.8em;
+    font-weight: normal;
+}
+.linea > div {
+    flex-basis: 30%;
+}
+.linea:nth-child(2n+1) {
+    background-color: rgba(100, 100, 100, 0.4);
+}
+.menu {
+    flex-basis: 80%;
+}
+.texto > p {
+    text-align: justify;
+}
+.texto > ul {
+    list-style-type: numeric;
+}
+.titulos > div {
+    flex-basis: 30%;
+}
+.ulportada a {
+    color: #333;
+}
+/*listado*/
+
+h2.titul {
+    font-size: 1.5em;
+    margin: 0;
+}
+.comentary div {
+    background-color: rgba(97, 45, 98, 0.8);
+}
+.comentary {
+    background-color: rgb(97, 45, 98);
+    color: white;
+    font-size: 0.8em;
+    padding: 1em;
+    position: relative;
+    text-align:center;
+}
+.comentary .elnombre {
+    box-shadow: 1px 1px 1px black;
+    left: 10px;
+    line-height: 1em;
+    padding: 3px;
+    position: absolute;
+}
+.comentary .ladat {
+    font-size: 0.6em;
+}
+
+.comentary h2.titul{
+	color:rgba(255,215,7,.8);
+}
+
+@media all and (max-width: 60em) {
+	div.firmalo{left: 12%;position: absolute;}
+}
+@media all and (max-width: 51em) {
+	div.manifiest, div.contacto, div.agradecimientos {
+	    width: 96%;
+	}
+	form#ideas {
+	    left: 0%;
+	    width: 100%;
+	}	
+	h2 {
+	    color: rgb(97, 45, 98);
+	    font-size: 1.1em;
+	}
+	select.seccion {
+	    width: 44%;
+	}
+	.clara > h3 {
+	    font-size: 1em;
+	    text-align: justify;
+	}	
+	.dcha img {
+	    right: 1%;
+	    top: 0.2em;
+	}	
+	.dos a {
+	    font-size: 0.6em;
+	}
+	.dos img {
+	    width: 80px;
+	}
+	.firmas > div {
+	    margin: auto;
+	    width: 100%;
+	}	
+	.manifiest > h3 {
+	    font-size: 1em;
+	}
+	.mdm > li {
+	    font-size: 0.7em;
+	    margin-bottom: 0.8em;
+	}	
+}
+@media all and (max-width: 42em) {
+	body {
+	    font-size: 1.5em;
+	    line-height: 1.1em;
+	}
+	div.contacto{
+		margin-top:0;
+	}
+	div.datos,div.acto{
+		flex-basis: 100%;
+	}
+	div.firmalo{left: 10%;}
+	div.manifiest, div.contacto{
+		width:94%;
+		padding: 3%;
+	}
+	div.portada{
+	    width: 51px;
+	}
+	div.firmalo{left: 8%;}
+	div.firmalo img{width: 27px;}
+	section.imagenes{margin-top:0;}
+	figure.imagenes img {
+	    width: 100%;
+	}
+	figure.imagenes.actiu {
+	    display: block;
+	    margin: auto;
+	    opacity: 1;
+	    width: 100%;
+	}	
+	form p{
+		width: 100%;
+	}
+	form input[type="submit"] {
+	    display: block;
+	    width: 35%;
+	}			
+	h1#manifiesto{
+		font-size:1.2em;
+	}
+	h2 {
+	    color: #0b3b17;
+	    font-size: 40px;
+	}
+	nav {
+	    height: 2em;
+	}
+	p {
+	    font-size: 0.7em;
+	}
+	p#elformulario{
+		text-align:center;
+	}
+	p.medio{left:12%;top:2%;font-size:1em;}
+	p.correo a{
+		display: block;
+	}
+	section.contacto{
+		background-image: none;
+		margin:auto;
+	}
+	section.info{
+		margin-top:2em;
+	}
+	section.firmas{
+		margin-top:0;
+	}
+	.agradecimientos > h2 {
+	    font-size: 2em;
+	}	
+
+	.dcha {
+	    margin-bottom: 2em;
+	}
+
+	.fotoportada {
+	    height: auto;
+	    margin-top: 3em;
+	    width: 100%;
+	}
+	.fotoportada > img {
+	    height: auto;
+	    position: relative;
+	    width: 100%;
+	    z-index: 0;
+	}
+	.inputs > input, .inputs > select{
+		width:90%;
+		height: 35px;
+	}
+	.firmas > div {
+	    margin: auto;
+	    width: 100%;
+	}
+
+	.menu {
+	    flex-basis: 90%;
+	    font-size: 0.8em;
+	}	
+}
+@media all and (max-width: 38em) {
+	div.portada {
+	    display:none;
+	}
+	footer,footer.lst{
+		position:relative;
+	}
+	h1 {
+    	font-size:1em;
+    	top:9%;
+	}
+	ul.ulportada{
+		display:none;
+	}
+	div.firmalo{position:initial;flex-basis:30%;right:4px;top:2.2em;}
+	div.tutisa > h2 {margin: 1em 0 0 auto;}
+	div.tutisa > img{width:25%;}
+	ul.ulportada.flexado{
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		flex-flow:column wrap;
+		background-color: rgba(20,20,20,.8);
+		margin:0;
+	}
+	ul.ulportada.flexado a{
+		color:#999;
+	}
+	ul.ulportada li a:hover,ul.ulportada li a.active{
+		color:#fff;
+	}	
+	.ulportada li {
+	    margin: 1em;
+	}
+	.menu {
+	    flex-basis: 42%;
+	    flex-grow: 0;
+	    font-size: 0.8em;
+	    position: relative;
+	}			
+	.elmenu {
+	    display: block;
+	}
+	.linea > div:first-child {
+	    font-weight: bold;
+	}			
+	.elmenu.oculto{display:none;}
+	select.idioma,select{
+		margin:0;
+	}
+	.cuadro div.titulos{display:none;}
+	.cuadro .listado .linea{
+		-webkit-flex-flow: column wrap;
+		-moz-flex-flow: column wrap;
+		-ms-flex-flow: column wrap;
+		-o-flex-flow: column wrap;
+		flex-flow: column wrap;
+		text-align:center;
+	}
+	.cierre {
+	    color: rgba(200, 200, 200, 0.6);;
+	    font-size: 0.6em;
+	    position: absolute;
+	    right: 6%;
+	    top: 1%;
+	}
+	.cierre:hover{
+		color:red;
+		cursor: pointer;
+	}
+	.manifiest > h3 {
+	    font-size: 0.8em;
+	}	
+}

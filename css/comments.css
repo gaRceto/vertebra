@@ -1,0 +1,86 @@
+h1{
+    position:relative;
+    left:auto;
+}
+h2.titul {
+    font-size: 1.4em;
+    margin: 0;
+}
+.comments.firmas{
+    margin-top:0;
+}
+.comms.correo {
+    background-color: rgba(0, 0, 128, 1);;
+    color:white;
+}
+.commentaires .elnombre {
+    box-shadow: 6px 3px 8px 1px rgba(0, 0, 0, 0.7);
+    line-height: 1em;
+    padding: 3px;
+    /*position: absolute;*/
+}
+.commentaires .linea:nth-child(2n+1) {
+    background-color: rgba(100,100,100,.6);
+}
+.commentaires .linea:nth-child(2n) {
+    background-color: rgba(102,178,168,.8);
+    color:white;
+}
+.commentaires .linea:nth-child(2n) h2.titul{
+    color:white;
+}
+.commentaires .linea > div {
+    flex-basis: 20%;
+    font-size: 1.2rem;
+}
+.linea {
+    border-top: 1px solid black;
+    padding-top: 4px;
+}
+.linea {
+    font-size: 0.8em;
+    font-weight: normal;
+}
+.linea > div {
+    flex-basis: 30%;
+}
+.linea {
+    font-size: 0.8em;
+    font-weight: normal;
+}
+
+span.ladat {
+    display: block;
+    font-size: 0.6em;
+    line-height: 0.8em;
+    margin: 1em 0 1em;
+    text-align: center;
+}
+.commentary {
+    line-height: 1.6em;
+    padding: 1%;
+    font-size: 2rem;
+    text-align: justify;
+}
+p.answer {
+    margin: auto;
+    text-align: center;
+}
+p.answer span {
+    color: gold;
+    font-size: 0.9em;
+    cursor:pointer;
+    margin-bottom: 0;
+    opacity: 0.8;
+    text-align: center;
+    text-decoration: underline;
+    text-shadow: 1px 1px 1px black;
+}
+p.answer span:hover{
+    color:black;
+    text-shadow: 1px 1px 1px gold;
+}
+@media all and (max-width: 60em) {
+h2.titul{font-size:1em;}
+.commentary{font-size:0.9em;}
+}

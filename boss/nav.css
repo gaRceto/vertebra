@@ -1,0 +1,61 @@
+﻿		aside {
+		    background: black none repeat scroll 0 0;
+		    color: white;
+		    flex-basis: 18%;
+		    font-size: 1.1em;
+		    position: relative;
+		}
+		aside ul {
+		    display: flex;
+		    flex-flow: column wrap;
+		    height: 100vh;
+		    justify-content: space-around;
+		    list-style: inside none none;
+		}
+		aside ul li{
+			color:#c01f39;
+		}
+		aside ul li i{
+			margin-right:0.4em;
+		}
+		aside a {
+	 	   color: white;
+		}
+		aside a:hover{
+			color:#c01f39;
+			text-shadow:1px 1px 1px white;
+		}
+		section {
+		    flex-basis: 82%;
+		}
+		li.activa a{
+			color:#c01f39;
+			text-shadow:1px 1px 1px white;
+			text-decoration:underline;
+		}
+		#main {
+		    display: flex;
+		    flex-flow: row wrap;
+		    justify-content: space-between;
+		}		
+		.botones button {
+		    background-color: #c01f39;
+		    color: white;
+		    cursor:pointer;
+		    font-family: monospace;
+		    font-size: 1.4em;
+		  -webkit-transition: all 0.5s ease-in-out 0s;
+		  transition: all 0.5s ease-in-out 0s;		    
+		}
+
+		.botones button:hover {
+	    	background-color: #888;
+	    	color: #000;
+		}	
+		
+		.botones {
+		    margin-bottom: 1em;
+		    margin-top: 1em;
+		    order: 2;
+		    text-align: center;
+		}

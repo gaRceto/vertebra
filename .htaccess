@@ -1,0 +1,41 @@
+#cabeceras
+<Files "\.(htm|html|css|js|php)$>
+AddDefaultCharset UTF-8
+</Files>
+
+#RewriteEngine On
+RewriteCond %{HTTP_HOST} !^vertebraragon\.com$ [NC]
+RewriteRule ^(.*)$ https://vertebraragon.com/$1 [R=301,L]
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://%{SERVER_NAME}/$1 [R,L]
+RewriteCond %{HTTP_USER_AGENT} libwww-perl.* 
+RewriteRule .* – [F,L]
+
+ExpiresActive On
+ExpiresDefault A0
+# 1 week
+<FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf|woff|wav|mp3)$">
+ExpiresDefault A604800
+Header set Cache-Control "public,must-revalidate"
+</FilesMatch>
+
+#etags
+Header unset ETag
+FileETag None
+
+#compresion
+#php_flag zlib.output_compression On
+#php_value zlib.output_compression_level 2
+
+#errores
+ErrorDocument 400 https://cucutastas.es/error404.html 
+ErrorDocument 404 https://cucutastas.es/error404.html 
+
+<Files *.css>
+SetOutputFilter DEFLATE
+</Files>
+
+<Files *.js>
+SetOutputFilter DEFLATE
+</Files> 
+

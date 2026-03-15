@@ -1,0 +1,96 @@
+a{
+	text-decoration: none;
+	color:black;
+}
+h2.notRel {
+    font-family: 'Kaushan Script', cursive;
+    margin-top:10%;
+    font-size:3rem;
+}
+h2.notRel.underl {
+    text-decoration: underline;
+    margin: auto;
+    margin-bottom: 5rem;
+    width: 40%;
+}
+#noticias {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -ms-flex-preferred-size: 80%;
+        flex-basis: 80%;
+    
+}
+#noticias div {
+    background: rgba(100,100,100,.3);
+    padding: 2%;
+    margin-bottom: 2%;
+}		
+.nuncio {
+    -ms-flex-preferred-size: 40%;
+        flex-basis: 40%;
+    max-width: 40%;
+    text-align: justify;
+}
+.nuncio h2{
+	text-align:center;
+	font-size:xx-large;
+}
+.nuncio img{
+	width: 100%;
+}
+.nwUrl {
+    font-size: 12.8px;
+    font-size: .8rem;
+    overflow: hidden;
+    margin:4%;
+    padding: 1px 4px;
+}
+.litUrl{
+	width:80%;
+	border:1px solid red;
+}
+
+@media all and (max-width: 60em) {
+form#ideas{
+    left:12%;
+    width:80%;
+}	
+.linea div{flex-basis:100%;text-align:center;}
+.linea div:nth-child(2), .linea div:nth-child(3){flex-basis:100%;text-align:center}
+.cuadro .listado .linea{line-height:1.2em;padding:0.3em 0;}
+.cuadro .titulos{display:none;}
+}
+
+@media all and (max-width: 56em) {
+	#noticias {font-size: 1rem;}
+	.nuncio {
+	    -ms-flex-preferred-size: 80%;
+	        flex-basis: 80%;
+	    max-width: 80%;
+	}
+}
+@media all and (max-width: 51em) {
+    h2.notRel{margin-top:16%;font-size:2rem;}
+    #noticias{font-size:1.2rem;}
+    .nuncio{
+        padding:2%;
+        -ms-flex-preferred-size: 90%;
+            flex-basis: 90%;
+        max-width: 90%;
+    }
+
+}
+@media all and (max-width: 42em) {
+    .cptz {
+       max-width: 100%;
+    }
+    .kptz{
+        text-align:left;
+    }
+}

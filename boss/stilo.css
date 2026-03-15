@@ -1,0 +1,78 @@
+		body{
+			color:#000;
+		}
+		a{
+			text-decoration: none;
+			color:#000;
+		}
+		#anuncios {
+		    display: flex;
+		    flex-flow: row wrap;
+		    justify-content: space-evenly;
+		    flex-basis: 78%;
+		}
+		#datos{
+			background-color: rgba(100,100,100,.5);
+		}
+		#insercion {
+/*		    flex-basis: 8%;*/
+		}
+		.bifase{
+			display:flex;
+			flex-flow:row wrap;
+			justify-content: space-between;
+		}
+		.enlaces {
+		    flex-basis: 20%;
+		}
+		.interior{
+			display: none;
+		}
+		.nuncio {
+		    flex-basis: 40%;
+		    max-width: 40%;
+		    text-align: justify;
+		}
+		.nuncio h2{
+			text-align:center;
+		}
+		.nuncio img{
+			width: 100%;
+		}
+		.nwUrl {
+		    font-size: .8rem;
+		    overflow: hidden;
+		    margin:4%;
+		    padding: 1px 4px;
+		}
+		.litUrl{
+			width:80%;
+			border:1px solid red;
+		}
+		.dellete{
+			background-color: red;
+			color:white;
+			font-size: .8rem;
+			border-radius: 50%;
+			margin-left:4%;
+		}
+		.dellete:hover{
+			cursor: pointer;
+			color:black;
+		}
+		.record {
+		    background-color: red;
+		    border-radius: 50%;
+		    margin-left: 2%;
+		    color: white;
+		    padding: 1%;
+		}
+		.record::after{
+			content:"O";
+			background-color: red;
+			border-radius: 50%;
+		}
+		.urls{
+			border: 1px solid;
+			height: 100vh;
+		}
