@@ -21,6 +21,9 @@ services:
         condition: service_healthy
     ports:
       - "8082:80"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.services.vertebra-web.loadbalancer.server.port=8082"
     networks:
       - internal
       - coolify
