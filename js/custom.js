@@ -55,6 +55,7 @@ function initia(evt)  {
             //rect[i].setAttribute("stroke")
             console.log(rect[i].id);
             var pct=document.querySelector("."+rect[i].id+".pct");
+            if(!pct){ rect[i].style="fill:lightgreen;stroke:#aaa;stroke-width:.5;fill-opacity:0.05"; continue; }
             pct=pct.value;
 
             pct=((pct/100)*2)+0.1;
