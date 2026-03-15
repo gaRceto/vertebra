@@ -19,6 +19,8 @@ services:
     depends_on:
       db:
         condition: service_healthy
+    labels:
+      - "traefik.http.services.vertebra-web.loadbalancer.server.port=80"
     networks:
       - internal
       - coolify
