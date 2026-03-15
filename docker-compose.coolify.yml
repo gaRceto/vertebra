@@ -5,7 +5,8 @@ services:
       MYSQL_ROOT_PASSWORD: vertebraroot
     volumes:
       - mysqldata:/var/lib/mysql
-      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./init.sql:/docker-entrypoint-initdb.d/01_init.sql
+      - ./vertebra.sql:/docker-entrypoint-initdb.d/02_vertebra.sql
     healthcheck:
       test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-pvertebraroot"]
       interval: 5s
