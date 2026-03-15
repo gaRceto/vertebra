@@ -46,8 +46,10 @@ if($json->captcha!=$_SESSION['willi']){
 		$result=$conn->prepare($consulta);
 		$result->execute();
 	}
-	$headers = "From: $email\r\n";
-	$headers .= 'Bcc: guillermogarciarouge@gmail.com' . "\r\n";
+	$smtp_to = getenv('SMTP_TO') ?: 'bonjour@ruedesfermes.com';
+	$smtp_from = getenv('SMTP_USER') ?: 'bonjour@ruedesfermes.com';
+	$headers = "From: vertebrAragón <$smtp_from>\r\n";
+	$headers .= "Reply-To: $email\r\n";
 	// $headers .= 'Bcc: yoar72@hotmail.com;guillermo@artesanoweb.es;' . "\r\n";
 	/*$headers .= 'Bcc: jonangc@gmail.com;guillermogarciarouge@gmail.com' . "\r\n";*/
 	$headers .= 'MIME-Version: 1.0' . "\r\n";
@@ -55,7 +57,7 @@ if($json->captcha!=$_SESSION['willi']){
 	$headers .='Content-Transfer-Encoding: 8bit';
 	$ast=($seccion=="com")?"Comentario web":"Email";
 	$asunto=$ast." en #vertebrAragón";
-	$mensaje .="<h1>".$ast." de ".$nombre.", <span style='font-size:0.5em'>&#8249;".$email."&#8250;</span></h1>";
+	$mensaje ="<h1>".$ast." de ".$nombre.", <span style='font-size:0.5em'>&#8249;".$email."&#8250;</span></h1>";
 	$mensaje .="<h2>".$titulo."</h2>";
 	$mensaje .="<p class='fecha'>".date('d-m-Y',strtotime('now'))."</p>";
 	$mensaje .="<p class='comentario'>".nl2br($comentario)."</p>";
@@ -65,7 +67,7 @@ if($json->captcha!=$_SESSION['willi']){
 		$mensaje .="<p><a target='_blank' href='https://vertebraragon.com/sis/bocom.php?id=".$id."'>Borrar este comentario</a></p>";
 	}
 	// if(mail("guillermo@cineymusica.es",$asunto,$mensaje,$headers))
-	if(mail("info@vertebraragon.com",$asunto,$mensaje,$headers))
+	if(mail($smtp_to,$asunto,$mensaje,$headers))
 	{
 	 echo "Mensaje Enviado Correctamente.";
 	}else{

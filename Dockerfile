@@ -6,7 +6,11 @@ RUN apt-get update && apt-get install -y \
     libfreetype6-dev \
     libjpeg62-turbo-dev \
     libpng-dev \
+    msmtp \
     && rm -rf /var/lib/apt/lists/*
+
+# Configurar PHP para usar msmtp como sendmail
+RUN echo 'sendmail_path = "/usr/bin/msmtp -t"' > /usr/local/etc/php/conf.d/mail.ini
 
 RUN docker-php-ext-configure gd --with-freetype --with-jpeg \
     && docker-php-ext-install -j$(nproc) gd pdo pdo_mysql mysqli
@@ -37,4 +41,8 @@ RUN sed -i '/RewriteCond %{HTTP_HOST} !.*vertebraragon/d' /var/www/html/.htacces
 
 RUN chown -R www-data:www-data /var/www/html
 
+COPY docker-entrypoint.sh /docker-entrypoint.sh
+RUN chmod +x /docker-entrypoint.sh
+
 EXPOSE 80
+CMD ["/docker-entrypoint.sh"]
