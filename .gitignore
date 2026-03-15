@@ -3,8 +3,6 @@ old/
 *.old
 *.bak
 
-# Archivos grandes no necesarios en git
-estudio-alagon.zip
 
 # Variables de entorno locales
 .env
