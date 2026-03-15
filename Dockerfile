@@ -24,11 +24,11 @@ RUN printf '<IfModule mod_setenvif.c>\n    SetEnvIf X-Forwarded-Proto https HTTP
 
 COPY . /var/www/html/
 
-# Reemplazar host=localhost por host=db en conexiones PDO
+# Reemplazar host=localhost por host=db y añadir charset=utf8mb4 en conexiones PDO
 RUN find /var/www/html -name "*.php" \
-    -exec sed -i 's/mysql:host=localhost; dbname=/mysql:host=db;dbname=/g' {} \; && \
+    -exec sed -i 's/mysql:host=localhost; dbname=\([^'\'']*\)/mysql:host=db;dbname=\1;charset=utf8mb4/g' {} \; && \
     find /var/www/html -name "*.php" \
-    -exec sed -i 's/mysql:host=localhost;dbname=/mysql:host=db;dbname=/g' {} \;
+    -exec sed -i 's/mysql:host=localhost;dbname=\([^'\'']*\)/mysql:host=db;dbname=\1;charset=utf8mb4/g' {} \;
 
 # Eliminar el redirect de dominio del .htaccess (en Docker lo gestiona Traefik)
 # Mantiene el resto de reglas (caché, compresión, etc.)
