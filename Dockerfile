@@ -39,7 +39,8 @@ RUN find /var/www/html -name "*.php" \
 RUN sed -i '/RewriteCond %{HTTP_HOST} !.*vertebraragon/d' /var/www/html/.htaccess && \
     sed -i '/RewriteRule.*vertebraragon\.com/d' /var/www/html/.htaccess
 
-RUN chown -R www-data:www-data /var/www/html
+RUN chown -R www-data:www-data /var/www/html && \
+    touch /var/log/msmtp.log && chmod 666 /var/log/msmtp.log
 
 COPY docker-entrypoint.sh /docker-entrypoint.sh
 RUN chmod +x /docker-entrypoint.sh
